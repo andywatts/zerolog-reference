@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "zerolog-reference/pkg/pb";
+
+service BlahService {
+  rpc GetBlah(MyRequest) returns (MyResponse) {}
+}
+
+message MyRequest {
+  string request = 1;
+}
+message MyResponse {
+  string response = 1;
+}
